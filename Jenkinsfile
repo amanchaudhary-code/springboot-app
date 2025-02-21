@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Checkout Code') {
             steps {
-                git branch: 'main', url: 'https://github.com/amanchaudhary394/springboot-app.git'
+                git branch: 'main', url: 'https://github.com/amanchaudhary394/springboot-app.git',credentialsId: 'github-credentials'
             }
         }
         stage('Build') {
